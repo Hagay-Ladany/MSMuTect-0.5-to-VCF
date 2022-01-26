@@ -14,7 +14,7 @@ cat("\n")
 cat(paste0(substr(Sys.time(), 1, 19), "  @get arguments:\n"))
 if (length(args) != 7) {
   stop(
-paste0("\n5 argument must be supplied: (you entered",length(args),")\n
+paste0("\n7 argument must be supplied: (you entered",length(args),")\n
 1-input file (char)\n
 2-InputPath (char)\n
 3-Output Path (char)\n
