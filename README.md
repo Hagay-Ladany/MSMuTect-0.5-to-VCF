@@ -1,9 +1,14 @@
 # MSMuTect-0.5-to-VCF
 R code that can convert MSMuTect output file to .vcf
+
 Usage:
+
 $MSMuTect_FILE=my.MSMuTect.file
+
 $INPUT_PAT=/my/input/folder
+
 $OUTPUT_PATH=/my/output/folder
+
 Rscript --vanilla MSMuTect_To_VCF.0.5.R $MSMuTect_FILE $INPUT_PATH $OUTPUT_PATH F 3 T T 5
 
 
