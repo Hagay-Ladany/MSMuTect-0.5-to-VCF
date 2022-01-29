@@ -53,13 +53,13 @@ remove_Sex_Chr <- T
 
 #different modes to filter variants in normal sample
 MODES <- c(
-  "1) Filter all non REF normals\n",
-  "2) Filter normals homozygous to ALT\n",
-  "3) Filter normals heterozygous to ALT\n",
-  "4) No filters\n",
-  "5) Exclude LOH: Remove variants which the normal is heterozygous and the tumor homozygous to one of the normal alleles.\n",
-  "6) Remove all normals with heterozygous samples.\n",
-  "7) Remove all normals with heterozygous or homozygous ALT alleles & all tumors that are not diploid heterozygous to REF.\n"
+  "1) Filter all non REF normals ",
+  "2) Filter normals homozygous to ALT ",
+  "3) Filter normals heterozygous to ALT ",
+  "4) No filters ",
+  "5) Exclude LOH: Remove variants which the normal is heterozygous and the tumor homozygous to one of the normal alleles. ",
+  "6) Remove all normals with heterozygous samples. ",
+  "7) Remove all normals with heterozygous or homozygous ALT alleles & all tumors that are not diploid heterozygous to REF. "
 )
 
 ### --- import MSMuTect input  --- ###
@@ -267,7 +267,7 @@ if (!OneSample) {
     
   }
   else{
-    stop("Bad input in 'mode' argument. valid values: 1..7.\n")
+    stop("\n Bad input in 'mode' argument. valid values: 1..7.\n")
   }
   
   if (output_MSMuTect) {MSMuTect_output <-MSMuTect_output[!grepl(pattern = "0/0", VCF_output_unique$TUMOR), ]}
@@ -275,7 +275,7 @@ if (!OneSample) {
 }
 invisible(gc())
 #for singleLine - #multiAlleles to seperate rows
-cat(paste0(substr(Sys.time(),1,19),"  @split multiAllelic loci to single lines\n"))
+cat(paste0(substr(Sys.time(),1,19),"\n @split multiAllelic loci to single lines\n"))
 if (singleLine){
   rezL<-list()
   rezL <- unlist(apply(VCF_output_unique,1,function(ROW) sapply( strsplit(ROW[5],split = ",") ,function(ALLELES) sapply(ALLELES, function(ALLELE) replace(x = ROW,list = 5,values = ALLELE)))))
