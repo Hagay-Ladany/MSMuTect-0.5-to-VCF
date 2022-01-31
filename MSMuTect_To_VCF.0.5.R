@@ -81,7 +81,7 @@ if(OneSample){
 ##source=Yosef Maruvka`s lab:www.MaruvkaLab.com
 ##INFO=<ID=LOCUS,Number=.,Type=String,Description="Microsatelite locus taken from MSMuTect output">
 ##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
-#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TUMOR')
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT  TUMOR')
   
 }else{
   VCF_header<-paste0(
@@ -91,7 +91,7 @@ if(OneSample){
 ##filter mode for normal samples: ',MODES[mode],'
 ##INFO=<ID=LOCUS,Number=.,Type=String,Description="Microsatelite locus taken from MSMuTect output">
 ##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
-#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL TUMOR')
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL  TUMOR')
 }
 
 cat(paste0(substr(Sys.time(),1,19),"  @generate VCF columns\n"))
