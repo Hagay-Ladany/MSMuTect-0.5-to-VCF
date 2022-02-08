@@ -88,7 +88,7 @@ if(OneSample){
     '##fileformat=VCFv4.2
 ##fileDate=',Sys.Date(),'
 ##source=Yosef Maruvka`s lab:www.MaruvkaLab.com
-##filter mode for normal samples: ',MODES[mode],'
+##Normal_filter_mode=',MODES[mode],'
 ##INFO=<ID=LOCUS,Number=.,Type=String,Description="Microsatelite locus taken from MSMuTect output">
 ##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL  TUMOR')
