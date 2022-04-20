@@ -30,6 +30,7 @@ Rscript --vanilla MSMuTect_To_VCF.0.5.R $MSMuTect_FILE $INPUT_PATH $OUTPUT_PATH 
                             5. Exclude LOH: Remove variants which the normal is heterozygous and the tumor homozygous to one of the normal alleles.
                             6. Remove all normals with heterozygous samples.
                             7. Remove all normals with heterozygous or homozygous ALT alleles & all tumors that are not diploid heterozygous to REF.
+                            8. Keep only tumor alleles that contain novel variants(not seen in REF or Normal.)
                             
 6-output-filtered MSMuTect file together with your vcf (Logical T/F)
 
