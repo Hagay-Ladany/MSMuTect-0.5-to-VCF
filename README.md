@@ -22,7 +22,7 @@ Rscript --vanilla MSMuTect_To_VCF.0.5.R $MSMuTect_FILE $INPUT_PATH $OUTPUT_PATH 
 
 4-Single Sample Mode (Logical T/F)
 
-5-Filtering mode (int 1..7):
+5-Filtering mode (int 1..8):
                             1. Filter all non REF normals,
                             2. Filter normals homozygous to ALT,
                             3. Filter normals heterozygous to ALT,
@@ -35,5 +35,3 @@ Rscript --vanilla MSMuTect_To_VCF.0.5.R $MSMuTect_FILE $INPUT_PATH $OUTPUT_PATH 
 6-output-filtered MSMuTect file together with your vcf (Logical T/F)
 
 7-Split multiAllelic loci in .vcf to single lines (Logical T/F)
-
-8-keep only tumor alleles that contain novel variants(not seen in REF or Normal)
